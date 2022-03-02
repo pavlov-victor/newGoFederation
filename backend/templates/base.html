@@ -1,0 +1,21 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% include 'components/dropcss.html' %}
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+    {% block block_js %}{% endblock %}
+</head>
+<body>
+{% include 'components/header.html' %}
+{% block content %}{% endblock %}
+{% include 'components/footer.html' %}
+</body>
+</html>
